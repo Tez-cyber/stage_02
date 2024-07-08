@@ -12,6 +12,9 @@ app.use(morgan("common"))
 app.use(cookieParser())
 
 //==============Routes
+import authRoute from './routes/auth.js'
+
+app.use('/auth', authRoute)
 
 const PORT = config.server.port
 app.listen(PORT, () => {
